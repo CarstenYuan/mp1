@@ -1,1 +1,47 @@
-/* Your SCSS here. */
+$color-bg: #FBF6EE;
+$color-text: #2B2018;
+$color-accent: #C1502E;
+$font-heading: "Playfair Display", Georgia, serif;
+$font-body: "Work Sans", system-ui, sans-serif;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: $font-body;
+    color: $color-text;
+    background: $color-bg;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: $color-text;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    nav {
+        display: flex;
+        gap: 24px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $color-bg;
+    }
+
+    .navbar__brand {
+        font-family: $font-heading;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+}
