@@ -11,9 +11,9 @@ $font-body: "Work Sans", system-ui, sans-serif;
 body {
     margin: 0;
     padding-top: 80px;
-    font-family: $font-body;
     color: $color-text;
     background: $color-bg;
+    font-family: $font-body;
 }
 
 .navbar {
@@ -43,5 +43,28 @@ body {
         font-size: 24px;
         font-weight: 700;
     }
+}
 
+#home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../assets/images/hero.jpg");
+    background-position: center;
+    background-size: cover;
+
+    color: $color-bg;
+    letter-spacing: 3px;
+
+    h1 {
+        font-size: 60px;
+        font-family: $font-heading;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
