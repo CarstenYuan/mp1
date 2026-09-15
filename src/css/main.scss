@@ -6,6 +6,8 @@ $color-sand-light: #F3E6D2;
 $font-heading: "Playfair Display", Georgia, serif;
 $font-body: "Work Sans", system-ui, sans-serif;
 
+
+// Share
 * {
     box-sizing: border-box;
 }
@@ -17,6 +19,19 @@ body {
     background: $color-bg;
     font-family: $font-body;
 }
+
+.eyebrow {
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    font-family: $font-heading;
+}
+
 
 // Navbar
 .navbar {
@@ -67,10 +82,6 @@ body {
         font-size: 60px;
         font-family: $font-heading;
     }
-
-    p {
-        font-size: 16px;
-    }
 }
 
 // Parks
@@ -84,15 +95,8 @@ body {
     align-items: center;
     background: $color-sand-light;
 
-    p {
-        font-size: 16px;
+    .eyebrow {
         color: $color-accent;
-        letter-spacing: 3px;
-    }
-
-    h2 {
-        font-size: 48px;
-        font-family: $font-heading;
     }
 
     div {
@@ -143,5 +147,33 @@ body {
         font-style: italic;
         max-width: 600px;
         text-align: center;
+    }
+}
+
+// Gallery
+#gallery {
+    padding: 110px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $color-sand-light;
+
+    .eyebrow {
+        color: $color-accent;
+    }
+
+    div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 30px;
+        justify-items: center;
+
+        img {
+            width: 80%;
+            height: 240px;
+            object-fit: cover;
+        }
     }
 }
