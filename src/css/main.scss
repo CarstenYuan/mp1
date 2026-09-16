@@ -14,7 +14,7 @@ $font-body: "Work Sans", system-ui, sans-serif;
 
 body {
     margin: 0;
-    padding-top: 80px;
+    padding-top: 60px;
     color: $color-text;
     background: $color-bg;
     font-family: $font-body;
@@ -24,7 +24,6 @@ body {
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
-    font-weight: bold;
 }
 
 h2 {
@@ -59,7 +58,7 @@ h2 {
     .navbar__brand {
         font-family: $font-heading;
         font-size: 24px;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
@@ -175,5 +174,25 @@ h2 {
             height: 240px;
             object-fit: cover;
         }
+    }
+}
+
+// Video
+#video {
+    padding: 110px 64px;
+    background: $color-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        color: $color-bg;
+    }
+
+    iframe {
+        width: 60%;
+        aspect-ratio: 16 / 9;
+        height: auto;
     }
 }
