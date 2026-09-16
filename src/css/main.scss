@@ -196,3 +196,55 @@ h2 {
         height: auto;
     }
 }
+
+// Footer
+#contact {
+    padding: 110px 64px;
+    background: $color-sand-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    .footer__columns {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        gap: 30px;
+        text-align: center;
+
+        .footer__col {
+            h3 {
+                font-size: 20px;
+                font-family: $font-heading;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .footer__icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            a {
+                text-decoration: none;
+                color: $color-text;
+            }
+
+            i {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .footer__copyright {
+        width: 100%;
+        padding-top: 30px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 12px;
+    }
+}
