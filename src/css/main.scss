@@ -84,6 +84,106 @@ h2 {
 }
 
 // Parks
+#parks {
+    padding: 110px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: $color-text;
+
+    .carousel__slides {
+        position: relative;
+        height: 500px;
+        width: 100%;
+    }
+
+    .carousel__slide {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .carousel__slide.active {
+        display: block;
+    }
+
+    .carousel__caption {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        max-width: 420px;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.5);
+        color: $color-bg;
+
+        .eyebrow {
+            color: $color-bg;
+        }
+
+        h3 {
+            font-size: 26px;
+            font-family: $font-heading;
+            margin: 8px 0;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .carousel__controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .carousel__prev,
+    .carousel__next {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $color-bg;
+        background: transparent;
+        color: $color-bg;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .carousel__dots {
+        display: flex;
+        gap: 12px;
+
+        .carousel__dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: $color-ink-soft;
+        }
+
+        .carousel__dot.active {
+            background: $color-accent;
+        }
+    }
+}
 
 // Tips
 #tips {
