@@ -1,6 +1,3 @@
-/* Your JS here. */
-console.log('Hello World!')
-
 // Navbar
 // Resizing
 const navbar = document.querySelector('.navbar');
@@ -47,3 +44,47 @@ function updateActiveLink() {
 
 updateActiveLink();
 window.addEventListener('scroll', updateActiveLink);
+
+
+// Carousel
+const slides = document.querySelectorAll('.carousel__slide');
+const dots = document.querySelectorAll('.carousel__dot');
+const prevBtn = document.querySelector('.carousel__prev');
+const nextBtn = document.querySelector('.carousel__next');
+
+let currentSlide = 0;
+
+function showSlide() {
+    slides.forEach(function (slide, index) {
+        slide.classList.remove('active');
+        if (index === currentSlide) {
+            slide.classList.add('active');
+        }
+    });
+
+    dots.forEach(function (dot, index) {
+        dot.classList.remove('active');
+        if (index === currentSlide) {
+            dot.classList.add('active');
+        }
+    });
+}
+
+nextBtn.addEventListener('click', function () {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide();
+})
+
+prevBtn.addEventListener('click', function () {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide();
+})
+
+dots.forEach(function (dot, index) {
+    dot.addEventListener('click', function () {
+        currentSlide = index;
+        showSlide();
+    });
+});
+
+showSlide();
