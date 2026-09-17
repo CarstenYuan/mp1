@@ -24,11 +24,24 @@ body {
     font-size: 16px;
     letter-spacing: 3px;
     text-transform: uppercase;
+
+    @media (max-width: 1280px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+            font-size: 12px;
+        }
 }
 
 h2 {
     font-size: 40px;
     font-family: $font-heading;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+    }
 }
 
 
@@ -49,11 +62,19 @@ h2 {
     nav {
         display: flex;
         gap: 24px;
+
+        @media (max-width: 768px) {
+            gap: 12px;
+        }
     }
 
     a {
         text-decoration: none;
         color: $color-bg;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+        }
     }
 
     a.active {
@@ -64,6 +85,10 @@ h2 {
         font-family: $font-heading;
         font-size: 24px;
         font-weight: 500;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     // Scrolling down
@@ -72,14 +97,25 @@ h2 {
 
         nav {
             gap: 20px;
+            @media (max-width: 768px) {
+                gap: 12px;
+            }
         }
 
         a {
             font-size: 10px;
+
+            @media (max-width: 768px) {
+                font-size: 8px;
+            }
         }
 
         .navbar__brand {
             font-size: 20px;
+
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
         }
     }
 
@@ -118,6 +154,27 @@ h2 {
     h1 {
         font-size: 60px;
         font-family: $font-heading;
+        text-align: center;
+
+        @media (max-width: 1280px) {
+            font-size: 42px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        text-align: center;
+
+        @media (max-width: 1280px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 }
 
@@ -135,6 +192,15 @@ h2 {
         position: relative;
         height: 500px;
         width: 100%;
+
+        @media (max-width: 1280px) {
+            height: 400px;
+            width: 90%;
+        }
+
+        @media (max-width: 768px) {
+            height: 320px;
+        }
     }
 
     .carousel__slide {
@@ -164,9 +230,17 @@ h2 {
         left: 40px;
         bottom: 40px;
         max-width: 420px;
-        padding: 24px;
+        padding: 16px;
         background: rgba(0, 0, 0, 0.5);
         color: $color-bg;
+
+        @media (max-width: 1280px) {
+            max-width: 360px;
+        }
+
+        @media (max-width: 768px) {
+            max-width: 240px;
+        }
 
         .eyebrow {
             color: $color-bg;
@@ -176,10 +250,26 @@ h2 {
             font-size: 26px;
             font-family: $font-heading;
             margin: 8px 0;
+
+            @media (max-width: 1280px) {
+                font-size: 22px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 18px;
+            }
         }
 
         p {
             font-size: 14px;
+
+            @media (max-width: 1280px) {
+                font-size: 12px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 10px;
+            }
         }
     }
 
@@ -207,6 +297,11 @@ h2 {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+
+        @media (max-width: 768px) {
+            width: 30px;
+            height: 30px;
+        }
     }
 
     .carousel__dots {
@@ -244,6 +339,10 @@ h2 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         width: 100%;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         div {
             display: flex;
@@ -315,6 +414,14 @@ h2 {
             width: 80%;
             height: 240px;
             object-fit: cover;
+
+            @media (max-width: 1280px) {
+                height: 180px;
+            }
+
+            @media (max-width: 768px) {
+                height: 110px;
+            }
         }
     }
 }
@@ -334,6 +441,14 @@ h2 {
 
     video {
         width: 60%;
+
+        @media (max-width: 1280px) {
+            width: 70%;
+        }
+
+        @media (max-width: 768px) {
+            width: 80%;
+        }
     }
 }
 
@@ -352,6 +467,10 @@ h2 {
         width: 100%;
         gap: 30px;
         text-align: center;
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .footer__col {
             h3 {
@@ -415,6 +534,16 @@ section {
         object-fit: cover;
         border-radius: 5%;
         border: 5px solid $color-bg;
+
+        @media (max-width: 1280px) {
+            width: 48vw;
+            height: 48vh;
+        }
+
+        @media (max-width: 768px) {
+            width: 40vw;
+            height: 30vh;
+        }
     }
 
     .modal__close {
