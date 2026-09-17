@@ -88,3 +88,33 @@ dots.forEach(function (dot, index) {
 });
 
 showSlide();
+
+
+// Modal
+const modal = document.querySelector('.modal')
+const modalClose = document.querySelector('.modal__close')
+const galleryImages = document.querySelectorAll('#gallery img');
+const modalImg = modal.querySelector('img');
+
+galleryImages.forEach(function (img) {
+    img.addEventListener('click', function () {
+        modalImg.src = img.src;
+        modal.classList.add('is-open');
+    });
+});
+
+modalClose.addEventListener('click', function () {
+    modal.classList.remove('is-open')
+})
+
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        modal.classList.remove('is-open');
+    }
+});
+
+modal.addEventListener('click', function (event) {
+    if (event.target === modal) {
+        modal.classList.remove('is-open');
+    }
+});
